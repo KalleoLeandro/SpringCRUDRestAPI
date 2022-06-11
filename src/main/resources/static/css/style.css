@@ -1,0 +1,51 @@
+#navbar{
+	justify-content: center;
+}
+
+body{
+	background-color: #777171;
+}
+
+.divform{
+	margin-bottom: 10px;	
+	background-color: brown;
+	color: white
+}
+
+.inputform{
+	margin-bottom: 10px;
+}
+
+div.modalPesquisar > button{
+	margin: 30px;	
+}
+
+.form{
+	width: 600px;
+	padding: 30px 50px 30px 50px;
+	margin: 30px auto;	
+	border: 1px solid black;
+	border-radius: 50px;
+	display: flex;	
+	flex-direction: column;		
+}
+
+.botoes{	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*Remover setas*/
+
+#id::-webkit-outer-spin-button,
+#id::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#idade::-webkit-outer-spin-button,
+#idade::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
