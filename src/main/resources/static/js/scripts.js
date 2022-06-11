@@ -19,7 +19,7 @@ async function SalvarUsuario(){
 	};
 	
 	var retorno;
-	await fetch('http://localhost:8080/springbootresttest/gravarusuario', options)
+	await fetch('gravarusuario', options)
     .then(dados => dados.text()).then(dados => {retorno = dados}).then(console.log(retorno)).catch(err => console.log(err));
     
     document.getElementById("id").value = "";
@@ -32,7 +32,7 @@ async function BuscarUsuarioPorNome(){
     if(nome != null && nome.trim() != ""){
 		var retorno;
 	    
-	    await fetch('http://localhost:8080/springbootresttest/buscarpornome?nome=' + nome)
+	    await fetch('buscarpornome?nome=' + nome)
 	    .then( response => response.json()).then(dados => {retorno = dados}).catch(e => console.log(e));
 	    
 	    var tabela = document.getElementById("tabelaBusca");
@@ -70,7 +70,7 @@ async function BuscarUsuarioPorId(index){
 	    },	
 	};
 		
-	await fetch('http://localhost:8080/springbootresttest/buscaruserid?id=' + index,options)
+	await fetch('buscaruserid?id=' + index,options)
 	.then( response => response.json()).then(dados => {retorno = dados}).catch(e => console.log(e));	
 	return retorno;
 }
@@ -101,7 +101,7 @@ async function DeletarUsuario(){
 		      'Content-Type': 'application/json'
 		    },	
 		};
-		await fetch('http://localhost:8080/springbootresttest/deletarusuario',options).catch(err=>console.log(err));
+		await fetch('deletarusuario',options).catch(err=>console.log(err));
 		document.getElementById("id").value = "";
     	document.getElementById("nome").value = "";
     	document.getElementById("idade").value = "";
