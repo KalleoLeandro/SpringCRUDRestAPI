@@ -84,8 +84,12 @@ async function PreencheCampos(index){
 	document.getElementById("id").value = retorno.id;
     document.getElementById("nome").value = retorno.nome;
     document.getElementById("idade").value = retorno.idade;
+            
+    document.getElementById("fecharModal").click();
     
-    document.getElementById("fecharModal").click();     
+    document.getElementById("recipient-nome").value= "";
+    
+     document.getElementById("tabelaBusca").innerHTML = "";     
 }
 
 async function DeletarUsuario(){
