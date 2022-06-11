@@ -20,7 +20,11 @@ async function SalvarUsuario(){
 	
 	var retorno;
 	await fetch('http://localhost:8080/springbootresttest/gravarusuario', options)
-    .then(dados => dados.text()).then(dados => {retorno = dados}).then(console.log(retorno)).catch(err => console.log(err));       
+    .then(dados => dados.text()).then(dados => {retorno = dados}).then(console.log(retorno)).catch(err => console.log(err));
+    
+    document.getElementById("id").value = "";
+    document.getElementById("nome").value = "";
+    document.getElementById("idade").value = "";         
 }
 
 async function BuscarUsuarioPorNome(){
